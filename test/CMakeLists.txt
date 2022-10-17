@@ -10,13 +10,12 @@ FetchContent_MakeAvailable(gtest)
 
 add_executable(
     unit_tests
-    example_add.cpp
-    example_subtract.cpp
+    ringbuffer.test.cpp
     )
 
 target_link_libraries(unit_tests
   PRIVATE
-    example
+    ringbuffer
     gtest_main
   )
 
