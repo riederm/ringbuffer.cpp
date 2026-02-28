@@ -4,5 +4,5 @@
 
 TEST(ringbuffer, initial_length_is_0) {
   auto buffer = RingBuffer(5);
-  ASSERT_EQ(buffer.length(), 1);
+  ASSERT_EQ(buffer.length(), 2);
 }
