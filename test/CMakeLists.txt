@@ -1,7 +1,7 @@
 include(FetchContent)
 FetchContent_Declare(gtest
   QUIET
-  URL https://github.com/google/googletest/archive/release-1.10.0.tar.gz
+  URL https://github.com/google/googletest/archive/refs/tags/v1.14.0.tar.gz
 )
 # configure build of googletest
 set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
@@ -17,6 +17,13 @@ target_link_libraries(unit_tests
   PRIVATE
     ringbuffer
     gtest_main
+  )
+
+target_compile_options(unit_tests
+  PRIVATE
+    -Wall
+    -Wextra
+    -Werror
   )
 
 # automatic discovery of unit tests
